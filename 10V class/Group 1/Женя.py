@@ -98,12 +98,3 @@
 # # print(K)
 # # #
 
-
-
-print(get_r(12502))
-
-for num in range(100000, 0, -1):
-    Z = get_r(num)
-    if Z == '222':
-        print(num)
-        break
