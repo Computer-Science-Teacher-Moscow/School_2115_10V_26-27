@@ -97,4 +97,19 @@
 # # K=(size*i*N)/2**13
 # # print(K)
 # # #
+# size = 1280 * 1024
+# t = 280
+# tr_sp = 1966080
+# N = 39
+# for i in range(1, 10000):
+#     if size * i * N / tr_sp <= t:
+#         print(2 ** i)
+
+def get_r(n):
+    r = bin(n)[2:]
+    r += r[:2][::-1]
+    return int(r, 2)
+
+
+print(get_r(11))
 
