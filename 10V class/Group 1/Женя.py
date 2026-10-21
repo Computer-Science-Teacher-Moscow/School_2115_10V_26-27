@@ -104,12 +104,20 @@
 # for i in range(1, 10000):
 #     if size * i * N / tr_sp <= t:
 #         print(2 ** i)
+#
+# def get_r(n):
+#     r = bin(n)[2:]
+#     r += r[:2][::-1]
+#     return int(r, 2)
+#
+#
+# print(get_r(11))
+from math import ceil
 
-def get_r(n):
-    r = bin(n)[2:]
-    r += r[:2][::-1]
-    return int(r, 2)
-
-
-print(get_r(11))
-
+n = 123
+N = 65536
+V = 13.5 * 2 ** 20
+for i in range(1, 100):
+    if ceil(i * n / 8) * N >= V:
+        print(2 ** (i - 1) + 1)
+        break
